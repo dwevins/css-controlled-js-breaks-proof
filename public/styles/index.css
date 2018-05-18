@@ -1,0 +1,75 @@
+body {
+  background-color: antiquewhite;
+}
+
+.breakpoint-monitor {
+  -webkit-animation: toDesktop 0s;
+          animation: toDesktop 0s;
+}
+
+@media (max-width: 768px) {
+  .breakpoint-monitor {
+    -webkit-animation: toTablet 0s;
+            animation: toTablet 0s;
+  }
+}
+
+@media (max-width: 500px) {
+  .breakpoint-monitor {
+    -webkit-animation: toMobile 0s;
+            animation: toMobile 0s;
+  }
+}
+
+.breakpoint-monitor:after {
+  content: "desktop";
+}
+
+@media (max-width: 768px) {
+  .breakpoint-monitor:after {
+    content: "tablet";
+  }
+}
+
+@media (max-width: 500px) {
+  .breakpoint-monitor:after {
+    content: "mobile";
+  }
+}
+
+@-webkit-keyframes toMobile {
+  100% {
+    background-color: #fff;
+  }
+}
+
+@keyframes toMobile {
+  100% {
+    background-color: #fff;
+  }
+}
+
+@-webkit-keyframes toTablet {
+  100% {
+    background-color: #fff;
+  }
+}
+
+@keyframes toTablet {
+  100% {
+    background-color: #fff;
+  }
+}
+
+@-webkit-keyframes toDesktop {
+  100% {
+    background-color: #fff;
+  }
+}
+
+@keyframes toDesktop {
+  100% {
+    background-color: #fff;
+  }
+}
+
